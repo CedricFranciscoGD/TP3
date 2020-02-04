@@ -37,7 +37,9 @@ int main(){
 	int prix2;
 	int prix3;
 	
-	//Mon inventaire
+	while(choixJoueur != 100)
+	{
+		//Mon inventaire
 	item inventaire[50] = {{"Lance en fer", 100},{"Potion de vie", 100},{"Potion de bouclier",100},
 	{"Heaume en acier",100},{"Morceau de viande",100}, {"Veste en cuir",100}};
 
@@ -49,6 +51,7 @@ int main(){
 	printf("Que souhaitez vous faire ?\n");
 	printf("Tapez 1 pour afficher votre inventaire..\n");
 	printf("Tapez 2 pour vous rendre au shop..\n");
+	printf("Tapez 100 pour quitter la partie. \n");
 	scanf("%d", &choixJoueur);
 	if (choixJoueur== 1)
 	{
@@ -127,35 +130,47 @@ int main(){
 			scanf("%d",&choixAchat);
 			if (choixAchat==1)
 			{
-				printf("Vous venez d'acheter %s \n", lance1.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n", lance1.nom, lance1.prix );
 			}
 			else if (choixAchat==2)
 			{
-				printf("Vous venez d'acheter %s \n",filet.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",filet.nom, filet.prix );
 			}
 			else if (choixAchat==3)
 			{
-				printf("Vous venez d'acheter %s \n",massue.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",massue.nom, massue.prix );
 			}
 			else if (choixAchat==4)
 			{
-				printf("Vous venez d'acheter %s \n",viande.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",viande.nom, viande.prix );
 			}
 			else if (choixAchat==5)
 			{
-				printf("Vous venez d'acheter %s \n",divers.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",divers.nom, divers.prix );
 			}
 			else if (choixAchat==6)
 			{
-				printf("Vous venez d'acheter %s \n",bouclier.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",bouclier.nom, bouclier.prix );
 			}
 			else if (choixAchat==7)
 			{
-				printf("Vous venez d'acheter %s \n",epee.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",epee.nom, epee.prix );
 			}
 			else if (choixAchat==8)
 			{
-				printf("Vous venez d'acheter %s \n",nourriture.nom );
+				printf("Vous venez d'acheter '%s' pour %d Or\n",nourriture.nom, nourriture.prix );
+			}
+			else if (choixAchat==9)
+			{
+				printf("Vous venez d'acheter '%s' pour %d Or\n",&item1, prix1 );
+			}
+			else if (choixAchat==10)
+			{
+				printf("Vous venez d'acheter '%s' pour %d Or\n",&item2, prix2);
+			}
+			else if (choixAchat==11)
+			{
+				printf("Vous venez d'acheter '%s' pour %d Or\n",&item3, prix3);
 			}
 
 		}
@@ -247,68 +262,19 @@ int main(){
 			}
 
 		}
-				printf("que souhaitez vous faire ?\n");
+				
+				
+	}
+
+}
+
+                printf("que souhaitez vous faire ?\n");
 				printf("Tapez 1 pour afficher votre inventaire..\n");
 				printf("Tapez 3 pour faire un achat\n");
 				printf("Tapez 4 pour demander au marchand d'ajouter un item\n");
 				printf("Tapez 0 pour quittez le shop\n");
 
 				scanf("%d", &choixJoueur);
-
-				if(choixJoueur==3)
-		{
-			printf("Que souhaitez vous acheter ?\n");
-			printf("Tapez le numero correspondant a l'article de votre choix\n");
-			scanf("%d",&choixAchat);
-			if (choixAchat==1)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n", lance1.nom, lance1.prix );
-			}
-			else if (choixAchat==2)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",filet.nom, filet.prix );
-			}
-			else if (choixAchat==3)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",massue.nom, massue.prix );
-			}
-			else if (choixAchat==4)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",viande.nom, viande.prix );
-			}
-			else if (choixAchat==5)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",divers.nom, divers.prix );
-			}
-			else if (choixAchat==6)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",bouclier.nom, bouclier.prix );
-			}
-			else if (choixAchat==7)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",epee.nom, epee.prix );
-			}
-			else if (choixAchat==8)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",nourriture.nom, nourriture.prix );
-			}
-			else if (choixAchat==9)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",&item1, prix1 );
-			}
-			else if (choixAchat==10)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",&item2, prix2);
-			}
-			else if (choixAchat==11)
-			{
-				printf("Vous venez d'acheter '%s' pour %d Or\n",&item3, prix3);
-			}
-
-		}
-	}
-
-}
 
 
 //fonction de tri que je n'arrive pas a utiliser...
@@ -332,6 +298,7 @@ int main(){
 
 
 	*/
+	}
 
 		
 
